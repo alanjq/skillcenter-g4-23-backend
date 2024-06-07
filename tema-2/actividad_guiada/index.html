@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad guiada 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+        <table class="table">
+            <thead>
+                <tr class="bg-danger">
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Contenido</th>
+                </tr>
+            </thead>
+            <tbody id="registros"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const API_POST_URL = 'https://jsonplaceholder.typicode.com/posts'
+
+        fetch(API_POST_URL)
+            .then(response => response.json())
+            .then(data => cargarDatos(data))
+            .catch(error => console.error(error))
+
+        const cargarDatos = (data) => {
+            let datos = ""
+            for(let i=0; i < data.length; i++){
+                datos += `
+                <tr><td>${data[i].id}</td>
+                    <td>${data[i].title}</td>
+                    <td>${data[i].body}</td>
+                </tr>
+                `;
+            }
+            document.getElementById('registros').innerHTML = datos
+        }
+    </script>
+</body>
+
+</html>
