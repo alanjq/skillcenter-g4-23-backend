@@ -1,3 +1,4 @@
+# Hecho por IVY
 import mysql.connector
 from mysql.connector import Error
 
@@ -9,7 +10,8 @@ def create_connection():
             host="localhost",
             user="root",
             password="password",
-            database="employees"
+            database="employees",
+            auth_plugin='mysql_native_password'
         )
         if connection.is_connected():
             print("Conexión exitosa a la base de datos MySQL")
