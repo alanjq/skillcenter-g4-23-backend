@@ -1,0 +1,13 @@
+{
+    "city": "México",
+    "language": "es",
+    "unit": "metric",
+    "temperature": 8.2,
+    "cloud_cover": 100,
+    "feels_like": 4.2,
+    "humidity": 14,
+    "wind":{
+        "speed": 18,
+        "dir": "SW"
+    }
+}

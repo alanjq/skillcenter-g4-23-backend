@@ -1,0 +1,13 @@
+{
+    "city": "Cancun",
+    "language": "es",
+    "unit": "metric",
+    "temperature": 28.2,
+    "cloud_cover": 100,
+    "feels_like": 34.2,
+    "humidity": 94,
+    "wind":{
+        "speed": 1.8,
+        "dir": "SE"
+    }
+}

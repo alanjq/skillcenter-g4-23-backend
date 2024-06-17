@@ -1,0 +1,13 @@
+{
+    "city": "León",
+    "language": "es",
+    "unit": "metric",
+    "temperature": 18.2,
+    "cloud_cover": 90,
+    "feels_like": 24.2,
+    "humidity": 84,
+    "wind":{
+        "speed": 11.8,
+        "dir": "NE"
+    }
+}
