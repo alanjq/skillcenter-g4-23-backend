@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  #sidebar {
+    height: 100%;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+  }
